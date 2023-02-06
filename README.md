@@ -31,11 +31,17 @@
 
     Os possíveis classificadores que decidi testar são: Logistic Regression, Decision Trees, Random Forest, Support Vector Machines e Neural Networks. O plano foi avaliar a performance de cada modelo através das métricas definidas na resposta da próxima questão e em seguida realizar um hyperparameter tunning para explorar todo o potencial do classificador que obtesse o melhor resultado na primeira fase de testes. Porém como apenas puder realizar o desafio no penúltimo dia para a entrega do resultado pois mudei de cidade e comecei um emprego novo no processo, tive que converter o desafio para um problema de classificação de 0 ou 1, pois não teria tempo de finalizar tudo caso tentasse o desafio por inteiro. Abaixo o passo-a-passo do que consegui fazer:
 
-        Treinei um modelo de classificação para identificar tipos de falhas. Primeiro, separei a coluna de falhas das variáveis e criei dois dataframes (features e target). Utilizei o Label Encoder para transformar as categorias de falhas em valores numéricos. Também apliquei o SimpleImputer para preencher valores ausentes em algumas variáveis e o OrdinalEncoder para a variável 'type'. Em seguida, criei um pipeline de transformação que incluía normalização dos dados, redução de dimensionalidade (PCA) e entrada para o classificador.
+        Treinei um modelo de classificação para identificar tipos de falhas. 
+        Primeiro, separei a coluna de falhas das variáveis e criei dois dataframes (features e target). 
+        Utilizei o Label Encoder para transformar as categorias de falhas em valores numéricos. 
+        Também apliquei o SimpleImputer para preencher valores ausentes em algumas variáveis e o OrdinalEncoder para a variável 'type'. 
+        Em seguida, criei um pipeline de transformação que incluía normalização dos dados, redução de dimensionalidade (PCA) e entrada para o classificador.
 
-        Usei a técnica de KFold para avaliar diferentes distribuições de treino e teste. Treinei vários modelos (DecisionTreeClassifier, LogisticRegression e KNeighborsClassifier) e identifiquei que o modelo 2 (que foi baseado em parâmetros de um projeto anterior) teve a melhor performance. A próxima etapa seria o tuning dos hiperparâmetros para ainda mais melhorar o desempenho do modelo.
+        Usei a técnica de KFold para avaliar diferentes distribuições de treino e teste. 
+        Treinei vários modelos (DecisionTreeClassifier, LogisticRegression e KNeighborsClassifier) 
+        e identifiquei que o modelo 2 (que foi baseado em parâmetros de um projeto anterior) teve a melhor performance. 
+        A próxima etapa seria o tuning dos hiperparâmetros para ainda mais melhorar o desempenho do modelo.
 
-    Eu escolhi accuracy F1-score e ROC AUC para esse extudo, pois são as que prefiro usar quando trabalho com classes desbalanceadas, mas na prátiva só utilizei a accuracy devido a falta de tempo citado no paragrafo acima.
+    Eu escolhi accuracy F1-score e ROC AUC para esse estudo, pois são as que prefiro usar quando trabalho com classes desbalanceadas, mas na prática só utilizei a  accuracy devido a falta de tempo citado no paragrafo acima.
+    
 # Predicao_de_falha
-# Predicao_de_falha
-# failure-prediction
